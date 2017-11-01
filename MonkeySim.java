@@ -160,18 +160,18 @@ public class MonkeySim {
     public static int runSimulation(List<Monkey> ml, MonkeyWatcher mw) {
 	int nextMonkey = -1;
 	
-	while (!getFirstMonkey(ml).hasBanana()) {
-	    mw.incrementRounds();
-	    Monkey m = ml.get(monkeyWithBanana(ml));
-	    int n = nextMonkeyAndResize(m, ml);
-	    Monkey m2 = ml.get(n);
-	    Banana b = m.throwBananaFrom();
-	    m2.throwBananaTo(b);
-	    String s = stringifyResults(mw.getRounds(), m, m2);
-	    System.out.println(s);
-	}
-	System.out.println("First monkey has the banana!");
-	return mw.getRounds();
+		while (!getFirstMonkey(ml).hasBanana()) {
+		    mw.incrementRounds();
+		    Monkey m = ml.get(monkeyWithBanana(ml));
+		    int n = nextMonkeyAndResize(m, ml);
+		    Monkey m2 = ml.get(n);
+		    Banana b = m.throwBananaFrom();
+		    m2.throwBananaTo(b);
+		    String s = stringifyResults(mw.getRounds(), m, m2);
+		    System.out.println(s);
+		}
+		System.out.println("First monkey has the banana!");
+		return mw.getRounds();
     }
     
     /**
