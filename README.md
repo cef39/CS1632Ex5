@@ -1,1 +1,2 @@
-# CS1632Ex5
+# MonkeySim
+(deliberately inefficient) Monkey Simulator
